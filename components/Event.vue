@@ -32,4 +32,8 @@ const props = defineProps({
     left: 80px;
     text-align: left;
   }
+
+  span {
+    color: #f0f0f0;
+  }
 </style>

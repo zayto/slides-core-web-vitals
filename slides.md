@@ -1,29 +1,48 @@
 ---
 theme: penguin
-layout: intro
+layout: new-section
 title: Core Web Vitals
 ---
 
-# Core Web Vitals
+<h1>Core Web Vitals</h1>
 
 <p class="intro">Performance & User Experience Metrics</p>
 
-<p class="author fixed bottom-2 right-8">Presented by Arnaud CORNILLON</p>
+<p class="author fixed bottom-2 right-8"><small>Speaker: Arnaud CORNILLON</small></p>
 
 <Event showText="true" />
 
 <style>
   .author {
     font-size: 14px;
+    color: white;
   }
 
-  .dark p.intro {
-    font-size: 20px !important;
+  p.intro {
+    color: white;
+  }
+
+  p.intro {
+    font-size: 20px;
     background: rgb(30 30 140);
     padding: 5px 5px;
     border-radius: 5px;
     margin-left: 250px;
     margin-right: 250px;
+  }
+  h1 {
+    font-size: 52px !important;
+    color: white !important;
+  }
+  .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
+  }
+  .dark .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
   }
 </style>
 <!--
@@ -34,21 +53,34 @@ title: Core Web Vitals
 
 # What are the Core Web Vitals?
 
-<span>3 core metrics</span> specified by Google to define **performance** & **good user experience metrics** for web pages.
+<span>3 core metrics</span> specified by Google to measure **performance** & the **user experience** for web pages.
 
-- 🎨 **Largest Contentful Paint (LCP)** - loading
-- <ic-baseline-touch-app /> **First Input Delay (FID)** - interactivity
-- <mdi-arrow-down-bold-box /> **Cumulative Layout Shift (CLS)** - visual stability
+<div class="h-5"></div>
 
-<br>
-<br>
+- 🎨 **Largest Contentful Paint (<span>LCP</span>)** - loading
+
+<div class="h-5"></div>
+
+- <ic-baseline-touch-app /> **First Input Delay (<span>FID</span>)** - interactivity
+
+<div class="h-5"></div>
+
+- <mdi-arrow-down-bold-box /> **Cumulative Layout Shift (<span>CLS</span>)** - visual stability
+
+<div class="h-25"></div>
+
 <img src="/images/web-vitals.PNG" class="absolute top-50 right-30 h-50 rounded-35px shadow" />
 <Event />
 <SlidesCount />
 
 <style>
   span {
-    color: #A305FE;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  span {
     font-weight: bold;
   }
   p {
@@ -70,7 +102,7 @@ layout: text-image
 clicks: 3
 ---
 
-# Why should we care?
+# Why should I care?
 
 <div v-click-hide class="absolute right-20 top-30 h-80 w-80">
   <img src="https://media.giphy.com/media/wqbAfFwjU8laXMWZ09/giphy.gif"/>
@@ -79,20 +111,18 @@ clicks: 3
 
 <v-clicks at="1">
 
-- Better web vitals indicate a **better user experience**
-- Monitoring those vitals can help **identify performance issues**
-- **Google Search rankings** take the vitals into account to determine a site's page ranking
+- Better web vitals indicate a **<span>better user experience</span>**
+- Monitoring those vitals can help **<span>identify performance issues</span>**
+- **<span>Google Search rankings</span>** take the vitals into account to determine a site's page ranking
 
 </v-clicks>
 
-<div class="h-20"></div>
 
 <v-clicks at="3">
 
 Learn more: [Google Search - page experience](https://developers.google.com/search/docs/advanced/experience/page-experience)
 
-<div class="h-10"></div>
-
+<div class="h-30"></div>
 
 
 </v-clicks>
@@ -110,6 +140,12 @@ Learn more: [Google Search - page experience](https://developers.google.com/sear
   }
   a {
     text-decoration: none !important;
+  }
+  span {
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
   }
 </style>
 
@@ -137,9 +173,6 @@ layout: new-section
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
     --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
   }
-  .dark .h1 {
-    color: #34f099 !important;
-  }
   .dark .bg-section {
     --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
@@ -154,7 +187,7 @@ layout: default
 
 Measures the time at which the **largest content** on the page is **rendered**.
 
---> page **loading speed**
+--> page **<span>loading speed</span>**
 
 <img class="w-145" src="/images/lcp_example.PNG"/>
 
@@ -170,6 +203,12 @@ Measures the time at which the **largest content** on the page is **rendered**.
 <SlidesCount />
 
 <style>
+  span {
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
   p {
     max-width: 400px;
   }
@@ -186,11 +225,11 @@ Measures the time at which the **largest content** on the page is **rendered**.
 layout: default
 ---
 # First Input Delay (FID)
-"FID measures the delay between when a user first interacts with a page [...] and when the browser is actually able to begin processing event handlers in response to that interaction". - [web.dev - FID](https://web.dev/fid/)
+<i>"FID measures the delay between when a user first interacts with a page [...] and when the browser is actually able to begin processing event handlers in response to that interaction"</i> - [web.dev - FID](https://web.dev/fid/)
 
 <small class="pl-5"><i>ex: click a link, tap a button, use a JS-powered control...</i></small>
 
---> page **interactivity &amp; load responsiveness**
+--> page **<span>interactivity &amp; load responsiveness</span>**
 
 <div class="pt-15"></div>
 
@@ -200,13 +239,14 @@ layout: default
 </div>
 
 <div v-click>
-FID (and TBT) can help to identify <b>performance issues</b>
+FID (and TBT) can help identify <b>performance issues</b>
 
 <small class="pl-5"><i>ex: main thread blocked while parsing/executing a large JS file</i></small>
 
   <div class="tbt">
-    <b>Total Blocking Time (<a href="https://web.dev/tbt/">TBT</a>, tasks &gt;50ms)</b> is a substitute to FID when lab testing
+    <b><span>Total Blocking Time</span> (<a href="https://web.dev/tbt/">TBT</a>, tasks &gt;50ms)</b> is a substitute to FID when lab testing
     <img class="w-80 mt-5" src="/images/tbt_example.PNG" />
+    <small><i>TBT representation on main thread timeline</i></small>
   </div>
 </div>
 
@@ -216,6 +256,12 @@ FID (and TBT) can help to identify <b>performance issues</b>
 <SlidesCount />
 
 <style>
+  span {
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
   h1 {
     margin-top: 16px !important; 
     margin-bottom: 16px !important;
@@ -231,18 +277,8 @@ FID (and TBT) can help to identify <b>performance issues</b>
     border-radius: 5px;
     max-width: 350px;
     position: absolute;
-    right: 50px;
-    bottom: 120px;
-  }
-  .dark .tbt {
-    background: rgb(45 45 140);
-    line-height: 22px;
-    padding: 15px 20px;
-    border-radius: 5px;
-    max-width: 350px;
-    position: absolute;
-    right: 50px;
-    bottom: 120px;
+    right: 40px;
+    bottom: 100px;
   }
   .interactions {
     max-width: 100px !important;
@@ -275,17 +311,34 @@ FID (and TBT) can help to identify <b>performance issues</b>
 layout: default
 ---
 # First Input Delay (FID)
-FID: "delay between when a user first interacts with a page [...] and when the browser is actually able to begin processing event handlers in response to that interaction"
 
-<img class="w-160 rounded ml-30" src="/images/fid_example.PNG" />
+<p>Schema representing FID:</p>
+<p class="caption"><i>- delay after first user input before the browser can respond to the event</i></p>
+<div>
+  <small class="topRight"><i>See <a href="https://web.dev/fid">web.dev - FID</a></i></small>
+  <img class="w-130 rounded ml-30" src="/images/fid_example.PNG" />
+</div>
+
 
 <Event />
 <SlidesCount />
 
 <style>
+  p {
+    max-width: 400px;
+  }
+  p.caption {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
   h1 {
     margin-top: 20px !important;
     margin-bottom: 16px !important;
+  }
+  .topRight {
+    position: relative;
+    right: -530px;
+    top: -7px;
   }
 </style>
 
@@ -299,8 +352,8 @@ media: ''
 
 # Cumulative Layout Shift (CLS)
 
-### What is a Layout Shift?
-A layout shift is when <span>a visible element changes position</span>, usually due to an element being added to the DOM above it.
+#### What is a Layout Shift?
+A layout shift is when <span>a visible element changes position</span>, usually due to an element being added to the DOM (above it).
 
 Some layout shifts are *fine* (ex: shortly after user events).
 
@@ -331,8 +384,11 @@ Some layout shifts are *fine* (ex: shortly after user events).
   }
 
   span {
-    color: #A305FE;
     font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
   }
 
   h3 {
@@ -363,7 +419,7 @@ layout: default
 
 The **CLS** is a measure of the <span>largest burst of layout shift scores</span> for every unexpected layout shift that occurs during the entire lifespan of a page.
 
---> page **visual stability** over time
+--> page **<span>visual stability</span>** over time
 
 <v-click at="1">
   <div class="pl-10">
@@ -398,15 +454,470 @@ CLS: Measures visual stability
     margin-bottom: 20px !important;
   }
   span {
-    color: #A305FE;
     font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
   }
   p {
     max-width: 460px;
   }
 </style>
---- 
+---
+layout: new-section
+---
 
+
+<h1 class="h1">Improving Web Vitals Scores</h1>
+
+<Event />
+
+<style>
+  .h1 {
+    color: white !important;
+  }
+  .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
+  }
+  .dark .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
+  }
+</style>
+---
+layout: default
+---
+# Improve the LCP score (1/3)
+
+Make sure your resources are <span>rendered quickly</span>.
+
+  - use SSR or SSG when possible for a faster load
+  - use [progressive loading techniques](https://jmperezperez.medium.com/more-examples-of-progressive-image-loading-f258be9f440b)
+    <br><i class="inner">ex: lazy-loading on images, blurred placeholders</i>
+  - load JS/CSS in a way that is not blocking the HTML parser
+    <br><i class="inner">ex: CSS / JS code splitting, load critical files first</i>
+
+<div class="absolute right-1 top-40 h-100 w-100">
+  <img src="images/lcp_lighthouse.png"/>
+  <small><i>PageSpeed Insights report: Render-blocking resources section</i></small>
+</div>
+
+<div class="h-100"></div>
+<div class="bottomRight">
+
+<ol class="resources">
+
+  - [Efficiently load 3rd party JS](https://web.dev/efficiently-load-third-party-javascript/)
+  - [Defer non-critcal CSS](https://web.dev/defer-non-critical-css/)
+  - [Optimize 3rd-party JS (lab tutorial)](https://web.dev/codelab-optimize-third-party-javascript/)
+
+</ol>
+
+</div>
+
+<Event />
+<SlidesCount />
+
+<!-- 
+TBD
+-->
+<style>
+  span {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  p {
+    max-width: 460px;
+  }
+  .bottomRight {
+    position: fixed;
+    bottom: 40px;
+    left: 80px;
+  }
+  .resources {
+    li {
+      list-style: none;
+    }
+  }
+  i.inner {
+    margin-left: 20px;
+  }
+</style>
+---
+layout: default
+---
+# Improve the LCP score (2/3)
+
+Make sure your resources are <span>discovered quickly</span>.
+
+  - load resources direclty from the main HTML document
+    <br><i class="inner">ex: inline fonts, inline critical CSS</i>
+  - use resource hints to set the loading priority for important resources
+    <br><i class="inner">ex: preconnect, prefetch, prerender on links, see [W3 Resource Hints](https://www.w3.org/TR/resource-hints/#resource-hints)</i>
+
+
+<div class="absolute left-30 top-90 h-140 w-140">
+  <img src="images/fcp_links.png"/>
+  <small><i>Adding resource hints & async/defer to improve page load performance</i></small>
+</div>
+
+<div class="h-100"></div>
+
+<Event />
+<SlidesCount />
+
+<!-- 
+TBD
+-->
+<style>
+  span {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  p {
+    max-width: 460px;
+  }
+  i.inner {
+    margin-left: 20px;
+  }
+</style>
+---
+layout: default
+---
+# Improve the LCP score (3/3)
+
+Make sure your resources are <span>sent quickly</span>.
+
+  - Use CDNs (closer to the edge user, faster response times)
+  - Optimize server response times
+  - Use compression for resources
+  <br><i class="inner">ex: gzip / brotli compression formats</i>
+  - Optimize images and use newer formats
+  <br><i class="inner">ex: WebP, AVIF (not fully supported)</i>
+
+
+<div class="h-100"></div>
+<Event />
+<SlidesCount />
+
+<!-- 
+TBD
+-->
+<style>
+  i.inner {
+    margin-left: 20px;
+  }
+   h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  span {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  p {
+    max-width: 460px;
+  }
+</style>
+---
+layout: default
+---
+# Improve the FID score
+
+<div class="h-10"></div>
+
+- avoid loading and running heavy Javascript during the initial page load
+
+<div class="h-5"></div>
+
+- use <span>code splitting</span> & <span>lazy-loading</span>, remove dead code, analyze your <span>bundle sizes</span> and 3rd party code
+
+<div class="h-5"></div>
+
+- use LightHouse to identify scripts running <span>long main-thread tasks</span> and the <span>Total Blocking Time</span> metrics
+
+<div class="absolute right-1 top-40 h-110 w-110">
+  <img src="images/tbt_lighthouse.png"/>
+  <small><i>PageSpeed Insights report: "Avoid Long Main Thread Tasks" section</i></small>
+</div>
+
+
+<div class="h-50"></div>
+<Event />
+<SlidesCount />
+
+<!-- 
+TBD
+-->
+<style>
+  i.inner {
+    margin-left: 20px;
+  }
+   h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  span {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  p {
+    max-width: 460px;
+  }
+  li {
+    max-width: 460px;
+  }
+</style>
+---
+layout: default
+---
+# Improve the CLS score
+
+- Set <span>width/height atttributes</span> on all images, videos, iframes
+
+<div class="h-5"></div>
+
+- Avoid CSS animations that cause layout shifts
+
+<div class="h-5"></div>
+
+- Don't add any element above the loaded content unless its a response to the user interaction
+  <br><i class="inner">ex: opening a filter box or a menu</i>
+
+<div class="h-5"></div>
+
+- Use LightHouse's <span><i><small>"Avoid large layout shifts"</small> section</i></span> to identify elements creating a layout shift
+
+<div class="absolute right-1 top-40 h-100 w-100">
+  <img src="images/cls_lighthouse.png"/>
+  <small><i>PageSpeed Insights report: CLS diagnostic on images</i></small>
+</div>
+
+<div class="h-50"></div>
+<Event />
+<SlidesCount />
+
+<!-- 
+TBD
+-->
+<style>
+  i.inner {
+    margin-left: 20px;
+  }
+   h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  span {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span {
+    color: rgb(52, 211, 153) !important;
+  }
+  p {
+    max-width: 460px;
+  }
+  li {
+    max-width: 480px;
+  }
+</style>
+---
+layout: new-section
+---
+
+
+<h1 class="h1">Measuring Web Vitals</h1>
+
+<Event />
+
+<style>
+  .h1 {
+    color: white !important;
+  }
+  .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
+  }
+  .dark .bg-section {
+    --tw-gradient-from: rgba(30, 60, 150, var(--tw-from-opacity, 1));
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+    --tw-gradient-to: rgba(100, 30, 255, var(--tw-to-opacity, 1));
+  }
+</style>
+---
+layout: default
+---
+
+# How to measure those metrics?
+
+- [Page Speed Insights](https://pagespeed.web.dev/) - simplest way, get a full report
+- [Web Vitals Chrome Extension](https://github.com/GoogleChrome/web-vitals-extension) - during navigation, in your browser
+- [LightHouse in ChromeDevtools](https://developers.google.com/web/tools/lighthouse) - generates lab data
+<div class="h-10"></div>
+
+<v-clicks at="1">
+<div>
+
+Others:
+- [Google Search Console](https://search.google.com/)
+- [Web-Vitals library](https://github.com/GoogleChrome/web-vitals) - npm package (145 kB)
+- [Web Vitals Report](https://github.com/GoogleChromeLabs/web-vitals-report) - web app with Google Analytics plugin
+
+<div class="absolute right-10 top-90">
+<small><i>Logging Web Vitals within the code with WebVitals package</i></small>
+
+```ts
+import { getLCP, getFID, getCLS } from 'web-vitals';
+
+// 
+getCLS(console.log);
+getFID(console.log);
+getLCP(console.log);
+```
+</div>
+
+</div>
+</v-clicks>
+
+<div class="h-40"></div>
+
+<Event />
+<SlidesCount />
+
+<div class="absolute right-10 top-30 w-60">
+  <small><i>Web Vitals via Chrome Extension</i></small>
+  <img src="images/chrome_extension.png"/>
+</div>
+
+
+<!-- 
+- Page Speed Insights is the easiest with the "field data" section (representing real users metrics from the last 28 days) and the lab data section (representing the equivalent of LightHouse simulations)
+- Google Search Console provides historical performance data and metrics on each page of the site (but you need to own the website to access those metrics)
+- Web-vitals library (available on npm) makes it easier to collect/log the metrics => can be paired with Google Analytics
+
+- [Web Vitals Report]: a web app to visualize Web Vitals reports created by sending Web Vitals data in Google Analytics
+- [Web Vitals Chrome Extension]: a Chrome extension to visualize the web vitals of a website during navigation
+-->
+
+
+<style>
+  a {
+    text-decoration: none !important;
+  }
+  i.inner {
+    margin-left: 20px;
+  }
+  h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  span .enhance {
+    font-weight: bold;
+    color: rgb(153, 53, 211);
+  }
+  .dark span .enhance {
+    color: rgb(52, 211, 153) !important;
+  }
+  p {
+    max-width: 460px;
+  }
+  li {
+    max-width: 430px;
+  }
+</style>
+---
+layout: default
+---
+
+# Pagespeed Insights
+
+
+
+<Event />
+<SlidesCount />
+
+<div v-click-hide>
+  <p class="mb-20"><small><i>Pagespeed report: Lab data (~LightHouse)</i></small></p>
+  
+  - LCP, TBT (equivalent to FID), CLS
+  - Time To Interactive (TTI, page fully interactive), First Contentful Paint, Speed Index (how quickly the content appears)
+
+  <div class="absolute right-10 top-10 w-130">
+    <img src="images/pagespeed_example_2.png"/>
+  </div>
+</div>
+
+<v-clicks at="1">
+<div>
+  <p><small><i>Pagespeed report: real users data</i></small></p>
+  <ul>
+  <li>FCP, FID, LCP, CLS</li></ul>
+    <div class="absolute right-10 top-40 w-160">
+      <img src="images/pagespeed_example_1.png"/>
+    </div>
+</div>
+</v-clicks>
+
+<div class="h-100"></div>
+
+<!-- 
+TBD
+-->
+
+
+<style>
+  h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  li {
+    max-width: 350px;
+  }
+</style>
+
+---
+layout: default
+---
 # Resources
 
 <div class="flex flex-row flex-space-between">
@@ -430,8 +941,8 @@ CLS: Measures visual stability
 <div class="flex-1">
 
 #### Videos
-- [Measure what matters](https://www.youtube.com/watch?v=wGT9s6NW6hg) 22/03/2021, Google Chrome Developers channel
-- [News on Core Web Vitals](https://www.youtube.com/watch?v=XxvHY4wC8Co) 18/05/2021, Google Chrome Developers channel
+- [Measure what matters](https://www.youtube.com/watch?v=wGT9s6NW6hg) 22/03/2021, Google Chrome Developers channel (8min)
+- [News on Core Web Vitals](https://www.youtube.com/watch?v=XxvHY4wC8Co) 18/05/2021, Google Chrome Developers channel (14min)
 
 <div class="my-10">
 
@@ -443,7 +954,7 @@ CLS: Measures visual stability
 </div>
 </div>
 </div>
-<p class="credits">Slides made with <a href="https://github.com/slidevjs/slidev">slidev</a> using @alvarosabu <a href="https://github.com/alvarosabu/slidev-theme-penguin">theme</a>.</p>
+<p class="credits">Slides made with <a href="https://github.com/slidevjs/slidev">slidev</a> using @alvarosabu <a href="https://github.com/alvarosabu/slidev-theme-penguin">theme</a></p>
 <Event />
 <SlidesCount />
 
@@ -460,7 +971,7 @@ CLS: Measures visual stability
     position: absolute;
     margin: 0 !important;
     bottom: 8px;
-    right: 70px;
+    right: 90px;
     font-size: 14px;
     font-style: italic;
   }
