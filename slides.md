@@ -2,7 +2,8 @@
 theme: penguin
 layout: new-section
 title: Core Web Vitals
-download: true
+download: https://github.com/zayto/slides-core-web-vitals/blob/master/slides-export.pdf
+colorSchema: dark
 ---
 
 <h1>Core Web Vitals</h1>
@@ -870,12 +871,9 @@ layout: default
 
 # Pagespeed Insights
 
-
-
 <Event />
 <SlidesCount />
 
-<div v-click-hide>
   <p class="mb-20"><small><i>Pagespeed report: Lab data (~LightHouse)</i></small></p>
   
   - LCP, TBT (equivalent to FID), CLS
@@ -884,9 +882,35 @@ layout: default
   <div class="absolute right-10 top-10 w-130">
     <img src="/pagespeed_example_2.png"/>
   </div>
-</div>
 
-<v-clicks at="1">
+<div class="h-100"></div>
+
+<!-- 
+TBD
+-->
+
+
+<style>
+  h1 {
+    width: 600px;
+    font-weight: 500 !important;
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+  }
+  li {
+    max-width: 350px;
+  }
+</style>
+
+---
+layout: default
+---
+
+# Pagespeed Insights
+
+<Event />
+<SlidesCount />
+
 <div>
   <p><small><i>Pagespeed report: real users data</i></small></p>
   <ul>
@@ -895,7 +919,6 @@ layout: default
       <img src="/pagespeed_example_1.png"/>
     </div>
 </div>
-</v-clicks>
 
 <div class="h-100"></div>
 
