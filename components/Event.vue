@@ -8,7 +8,7 @@ const props = defineProps({
 
 <template>
   <div>
-    <img src="/images/niji_logo.jpg" class="logo h-15 shadow" />
+    <img src="/niji_logo.jpg" class="logo h-15 shadow" />
     <div v-if="showText" class="date">
       <span>Monthly RUN</span>
       <br>

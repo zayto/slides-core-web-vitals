@@ -69,7 +69,7 @@ title: Core Web Vitals
 
 <div class="h-25"></div>
 
-<img src="/images/web-vitals.PNG" class="absolute top-50 right-30 h-50 rounded-35px shadow" />
+<img src="/web-vitals.png" class="absolute top-50 right-30 h-50 rounded-35px shadow" />
 <Event />
 <SlidesCount />
 
@@ -189,12 +189,12 @@ Measures the time at which the **largest content** on the page is **rendered**.
 
 --> page **<span>loading speed</span>**
 
-<img class="w-145" src="/images/lcp_example.PNG"/>
+<img class="w-145" src="/lcp_example.png"/>
 
 <v-click at="1">
 
 <div class="absolute right-10 top-20 text-right">
-  <img class="w-80 rounded" src="/images/lcp.PNG" />
+  <img class="w-80 rounded" src="/lcp.png" />
   <p><i>A good LCP is &lt;2.5s </i></p>
 </div>
 </v-click>
@@ -234,7 +234,7 @@ layout: default
 <div class="pt-15"></div>
 
 <div class="absolute right-10 top-20 text-right">
-  <img class="w-80 rounded ml-30" src="/images/fid.PNG" />
+  <img src="/fid.png" class="w-80 rounded ml-30" />
   <p><i>A good FID is &lt;100ms </i></p>
 </div>
 
@@ -245,7 +245,7 @@ FID (and TBT) can help identify <b>performance issues</b>
 
   <div class="tbt">
     <b><span>Total Blocking Time</span> (<a href="https://web.dev/tbt/">TBT</a>, tasks &gt;50ms)</b> is a substitute to FID when lab testing
-    <img class="w-80 mt-5" src="/images/tbt_example.PNG" />
+    <img class="w-80 mt-5" src="/tbt_example.png" />
     <small><i>TBT representation on main thread timeline</i></small>
   </div>
 </div>
@@ -316,7 +316,7 @@ layout: default
 <p class="caption"><i>- delay after first user input before the browser can respond to the event</i></p>
 <div>
   <small class="topRight"><i>See <a href="https://web.dev/fid">web.dev - FID</a></i></small>
-  <img class="w-130 rounded ml-30" src="/images/fid_example.PNG" />
+  <img class="w-130 rounded ml-30" src="/fid_example.png" />
 </div>
 
 
@@ -359,7 +359,7 @@ Some layout shifts are *fine* (ex: shortly after user events).
 
 
 <div class="pl-10">
-  <img class="h-60 rounded" src="/images/cls_example.PNG"/>
+  <img class="h-60 rounded" src="/cls_example.png"/>
 </div>
 
 <div v-click class="absolute top-30 right-10">
@@ -423,12 +423,12 @@ The **CLS** is a measure of the <span>largest burst of layout shift scores</span
 
 <v-click at="1">
   <div class="pl-10">
-    <img class="h-60" src="/images/cls_sessions.PNG"/>
+    <img class="h-60" src="/cls_sessions.png"/>
     <small><i>source: <a href="https://web.dev/cls/">web.dev - CLS</a></i></small>
   </div>
   
   <div class="absolute right-10 top-20 text-right">
-    <img class="w-80 rounded" src="/images/cls.PNG" />
+    <img class="w-80 rounded" src="/cls.png" />
     <p><i>A good CLS is &lt;0.1 </i></p>
   </div>
 </v-click>
@@ -502,7 +502,7 @@ Make sure your resources are <span>rendered quickly</span>.
     <br><i class="inner">ex: CSS / JS code splitting, load critical files first</i>
 
 <div class="absolute right-1 top-40 h-100 w-100">
-  <img src="images/lcp_lighthouse.png"/>
+  <img src="/lcp_lighthouse.png"/>
   <small><i>PageSpeed Insights report: Render-blocking resources section</i></small>
 </div>
 
@@ -570,7 +570,7 @@ Make sure your resources are <span>discovered quickly</span>.
 
 
 <div class="absolute left-30 top-90 h-140 w-140">
-  <img src="images/fcp_links.png"/>
+  <img src="/fcp_links.png"/>
   <small><i>Adding resource hints & async/defer to improve page load performance</i></small>
 </div>
 
@@ -664,7 +664,7 @@ layout: default
 - use LightHouse to identify scripts running <span>long main-thread tasks</span> and the <span>Total Blocking Time</span> metrics
 
 <div class="absolute right-1 top-40 h-110 w-110">
-  <img src="images/tbt_lighthouse.png"/>
+  <img src="/tbt_lighthouse.png"/>
   <small><i>PageSpeed Insights report: "Avoid Long Main Thread Tasks" section</i></small>
 </div>
 
@@ -721,7 +721,7 @@ layout: default
 - Use LightHouse's <span><i><small>"Avoid large layout shifts"</small> section</i></span> to identify elements creating a layout shift
 
 <div class="absolute right-1 top-40 h-100 w-100">
-  <img src="images/cls_lighthouse.png"/>
+  <img src="/cls_lighthouse.png"/>
   <small><i>PageSpeed Insights report: CLS diagnostic on images</i></small>
 </div>
 
@@ -822,7 +822,7 @@ getLCP(console.log);
 
 <div class="absolute right-10 top-30 w-60">
   <small><i>Web Vitals via Chrome Extension</i></small>
-  <img src="images/chrome_extension.png"/>
+  <img src="/chrome_extension.png"/>
 </div>
 
 
@@ -881,7 +881,7 @@ layout: default
   - Time To Interactive (TTI, page fully interactive), First Contentful Paint, Speed Index (how quickly the content appears)
 
   <div class="absolute right-10 top-10 w-130">
-    <img src="images/pagespeed_example_2.png"/>
+    <img src="/pagespeed_example_2.png"/>
   </div>
 </div>
 
@@ -891,7 +891,7 @@ layout: default
   <ul>
   <li>FCP, FID, LCP, CLS</li></ul>
     <div class="absolute right-10 top-40 w-160">
-      <img src="images/pagespeed_example_1.png"/>
+      <img src="/pagespeed_example_1.png"/>
     </div>
 </div>
 </v-clicks>
