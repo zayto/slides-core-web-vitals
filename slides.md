@@ -405,6 +405,9 @@ Some layout shifts are *fine* (ex: shortly after user events).
     margin-top: 30px !important;
     margin-bottom: 20px !important;
   }
+  h4 {
+    font-family: Poppins !important;
+  }
 
   span {
     font-weight: bold;
@@ -536,7 +539,7 @@ Make sure your resources are <span>rendered quickly</span>.
 
 <ol class="resources">
 
-  - [Efficiently load 3rd party JS](https://web.dev/efficiently-load-third-party-javascript/)
+  - [Efficiently load 3rd-party JS](https://web.dev/efficiently-load-third-party-javascript/)
   - [Defer non-critcal CSS](https://web.dev/defer-non-critical-css/)
   - [Optimize 3rd-party JS (lab tutorial)](https://web.dev/codelab-optimize-third-party-javascript/)
 
@@ -639,11 +642,11 @@ layout: default
 
 Make sure your resources are <span>sent quickly</span>.
 
-  - Use CDNs (closer to the edge user, faster response times)
-  - Optimize server response times
-  - Use compression for resources
+  - use CDNs (closer to the edge user, faster response times)
+  - use compression for resources
   <br><i class="inner">ex: gzip / brotli compression formats</i>
-  - Optimize images and use newer formats
+  - optimize server response times
+  - optimize images and use newer formats
   <br><i class="inner">ex: WebP, AVIF (not fully supported)</i>
 
 
@@ -687,7 +690,7 @@ layout: default
 
 <div class="h-5"></div>
 
-- use <span>code splitting</span> & <span>lazy-loading</span>, remove dead code, analyze your <span>bundle sizes</span> and 3rd party code
+- use <span>code splitting</span> & <span>lazy-loading</span>, remove dead code, analyze your <span>bundle sizes</span> and 3rd-party code
 
 <div class="h-5"></div>
 
@@ -736,20 +739,20 @@ layout: default
 ---
 # Improve the CLS score
 
-- Set <span>width/height atttributes</span> on all images, videos, iframes
+- set <span>width/height atttributes</span> on all images, videos, iframes
 
 <div class="h-5"></div>
 
-- Avoid CSS animations that cause layout shifts
+- avoid CSS animations that cause layout shifts
 
 <div class="h-5"></div>
 
-- Don't add any element above the loaded content unless its a response to the user interaction
+- don't add any element above the loaded content unless its a response to the user interaction
   <br><i class="inner">ex: opening a filter box or a menu</i>
 
 <div class="h-5"></div>
 
-- Use LightHouse's <span><i><small>"Avoid large layout shifts"</small> section</i></span> to identify elements creating a layout shift
+- use LightHouse's <span><i><small>"Avoid large layout shifts"</small> section</i></span> to identify elements creating a layout shift
 
 <div class="absolute right-1 top-40 h-100 w-100">
   <img src="/cls_lighthouse.png"/>
@@ -819,7 +822,7 @@ layout: default
 
 # How to measure the vitals?
 
-- [Page Speed Insights](https://pagespeed.web.dev/) - simplest way, get a full report
+- [Page Speed Insights](https://pagespeed.web.dev/) - simplest way, get a full report (lab data + real users data)
 - [Web Vitals Chrome Extension](https://github.com/GoogleChrome/web-vitals-extension) - during navigation, in your browser
 - [LightHouse in ChromeDevtools](https://developers.google.com/web/tools/lighthouse) - generates lab data
 <div class="h-10"></div>
@@ -838,7 +841,6 @@ Others:
 ```ts
 import { getLCP, getFID, getCLS } from 'web-vitals';
 
-// 
 getCLS(console.log);
 getFID(console.log);
 getLCP(console.log);
@@ -895,6 +897,10 @@ getLCP(console.log);
   }
   li {
     max-width: 430px;
+  }
+  // Style code window
+  .line {
+    font-family: Poppins !important;
   }
 </style>
 ---
