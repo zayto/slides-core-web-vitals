@@ -2,6 +2,7 @@
 theme: penguin
 layout: new-section
 title: Core Web Vitals
+download: true
 ---
 
 <h1>Core Web Vitals</h1>
