@@ -4,6 +4,9 @@ layout: new-section
 title: Core Web Vitals
 download: https://github.com/zayto/slides-core-web-vitals/blob/master/slides-export.pdf
 colorSchema: dark
+fonts:
+  sans: 'Poppins'
+  provider: 'google'
 ---
 
 <h1>Core Web Vitals</h1>
@@ -33,6 +36,7 @@ colorSchema: dark
     margin-right: 250px;
   }
   h1 {
+    font-family: Poppins !important;
     font-size: 52px !important;
     color: white !important;
   }
@@ -76,6 +80,9 @@ colorSchema: dark
 <SlidesCount />
 
 <style>
+  h1 {
+    font-family: Poppins !important;
+  }
   span {
     color: rgb(153, 53, 211);
   }
@@ -134,6 +141,9 @@ Learn more: [Google Search - page experience](https://developers.google.com/sear
 
 <style>
   h1 {
+    font-family: Poppins !important;
+  }
+  h1 {
     width: 500px;
     font-weight: 500 !important;
   }
@@ -168,6 +178,7 @@ layout: new-section
 
 <style>
   .h1 {
+    font-family: Poppins !important;
     color: white !important;
   }
   .bg-section {
@@ -205,6 +216,9 @@ Measures the time at which the **largest content** on the page is **rendered**.
 <SlidesCount />
 
 <style>
+  h1 {
+    font-family: Poppins !important;
+  }
   span {
     color: rgb(153, 53, 211);
   }
@@ -258,6 +272,9 @@ FID (and TBT) can help identify <b>performance issues</b>
 <SlidesCount />
 
 <style>
+  h1 {
+    font-family: Poppins !important;
+  }
   span {
     color: rgb(153, 53, 211);
   }
@@ -326,6 +343,9 @@ layout: default
 <SlidesCount />
 
 <style>
+  h1 {
+    font-family: Poppins !important;
+  }
   p {
     max-width: 400px;
   }
@@ -379,6 +399,7 @@ Some layout shifts are *fine* (ex: shortly after user events).
 
 <style>
   h1 {
+    font-family: Poppins !important;
     width: 600px;
     font-weight: 500 !important;
     margin-top: 30px !important;
@@ -449,7 +470,8 @@ CLS: Measures visual stability
 - A good CLS is <0.1, a poor CLS is >0.25
 -->
 <style>
-   h1 {
+  h1 {
+    font-family: Poppins !important;
     width: 600px;
     font-weight: 500 !important;
     margin-top: 30px !important;
@@ -477,6 +499,7 @@ layout: new-section
 
 <style>
   .h1 {
+    font-family: Poppins !important;
     color: white !important;
   }
   .bg-section {
@@ -536,6 +559,7 @@ TBD
     color: rgb(52, 211, 153) !important;
   }
   h1 {
+    font-family: Poppins !important;
     width: 600px;
     font-weight: 500 !important;
     margin-top: 30px !important;
@@ -585,6 +609,9 @@ Make sure your resources are <span>discovered quickly</span>.
 TBD
 -->
 <style>
+  h1 {
+    font-family: Poppins !important;
+  }
   span {
     font-weight: bold;
     color: rgb(153, 53, 211);
@@ -632,6 +659,7 @@ TBD
     margin-left: 20px;
   }
    h1 {
+    font-family: Poppins !important;
     width: 600px;
     font-weight: 500 !important;
     margin-top: 30px !important;
@@ -684,6 +712,7 @@ TBD
   }
    h1 {
     width: 600px;
+    font-family: Poppins !important;
     font-weight: 500 !important;
     margin-top: 30px !important;
     margin-bottom: 20px !important;
@@ -740,6 +769,7 @@ TBD
   }
    h1 {
     width: 600px;
+    font-family: Poppins !important;
     font-weight: 500 !important;
     margin-top: 30px !important;
     margin-bottom: 20px !important;
@@ -769,6 +799,7 @@ layout: new-section
 
 <style>
   .h1 {
+    font-family: Poppins !important;
     color: white !important;
   }
   .bg-section {
@@ -786,7 +817,7 @@ layout: new-section
 layout: default
 ---
 
-# How to measure those metrics?
+# How to measure the vitals?
 
 - [Page Speed Insights](https://pagespeed.web.dev/) - simplest way, get a full report
 - [Web Vitals Chrome Extension](https://github.com/GoogleChrome/web-vitals-extension) - during navigation, in your browser
@@ -847,6 +878,7 @@ getLCP(console.log);
   }
   h1 {
     width: 600px;
+    font-family: Poppins !important;
     font-weight: 500 !important;
     margin-top: 30px !important;
     margin-bottom: 20px !important;
@@ -893,6 +925,7 @@ TBD
 <style>
   h1 {
     width: 600px;
+    font-family: Poppins !important;
     font-weight: 500 !important;
     margin-top: 30px !important;
     margin-bottom: 20px !important;
@@ -930,6 +963,7 @@ TBD
 <style>
   h1 {
     width: 600px;
+    font-family: Poppins !important;
     font-weight: 500 !important;
     margin-top: 30px !important;
     margin-bottom: 20px !important;
@@ -984,10 +1018,12 @@ layout: default
 
 <style>
   h1 {
+    font-family: Poppins !important;
     margin-top: 0px !important;
     margin-bottom: 10px !important;
   }
   h4 {
+    font-family: Poppins !important;
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
